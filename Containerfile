@@ -10,7 +10,7 @@ RUN ./build.sh
 
 FROM alpine:latest
 
-RUN apk add libmicrohttpd nftables
+RUN apk add libmicrohttpd nftables bash
 
 COPY --from=builder /install/ /
 
