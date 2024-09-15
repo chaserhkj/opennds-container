@@ -13,3 +13,7 @@ FROM alpine:latest
 RUN apk add libmicrohttpd
 
 COPY --from=builder /install/ /
+
+COPY entrypoint.sh /
+
+ENTRYPOINT /entrypoint.sh
